@@ -1,0 +1,6 @@
+#!/bin/bash
+set -ex
+virtualenv venv
+venv/bin/pip install https://github.com/pyinstaller/pyinstaller/archive/d56ea74b6ee03d319e7223c91cc15022542bcdcf.tar.gz
+venv/bin/pip install .
+venv/bin/pyinstaller -F bin/fig
