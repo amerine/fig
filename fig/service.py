@@ -166,7 +166,7 @@ class Service(object):
             self.client,
             image=container.image,
             volumes_from=container.id,
-            entrypoint='echo',
+            entrypoint=['echo'],
             command=[],
         )
         intermediate_container.start()
